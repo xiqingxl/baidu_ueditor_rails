@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["zcppku@gmail.com"]
   s.homepage    = "https://github.com/zcpdog/baidu_ueditor_rails"
   s.summary     = "Baidu ueditor for rails."
-  s.description = "Baidu ueditor for rails."
+  s.description = "ueditor for rails 3 and rails 4, it is a good wysiwyg html editor"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files  = Dir["test/**/*"]
