@@ -43,6 +43,13 @@ In ueditor_custom_config.js, it looks like:
 (function () {
     window.CUSTOM_CONFIG = {
       // Insert your config code
+	  	imageUrl: "/ueditor_images"
+		,imagePath: ""
+		,maxImageSideLength: 600
+		,elementPathEnabled: false
+		,wordCount:0          //是否开启字数统计
+		,maximumWords:5000       //允许的最大字符数
+		,savePath: ['upload']
       // toolbars: [
       //      ['Source','Undo','Redo','Cleardoc','SearchReplace','InsertImage','WordImage','Bold','ForeColor','JustifyLeft',
       //      'JustifyCenter','JustifyRight','JustifyJustify','RemoveFormat','FormatMatch','AutoTypeSet','PastePlain',
@@ -61,6 +68,25 @@ window.CUSTOM_CONFIG = {
 };
 ```
 
+## Upload File
+
+```ruby
+	class UeditorImagesController < ApplicationController
+	  skip_before_filter :verify_authenticity_token, :only => [:create]
+	  def create
+	    @ueditor_image = UeditorImage.new(image: params[:upfile])
+	    respond_to do |format|
+	      if @ueditor_image.save
+	        data = {:url=> @ueditor_image.image.url, :title => params[:title], :original => params[:upfile].original_filename, :state => 'SUCCESS'}
+	      else
+	        data = {:title => params[:title], :original => params[:upfile].original_filename, :state => 'FAIL'}
+	      end
+	      format.js {render :json => data.to_json}
+	    end
+	  end
+	end
+```
+
 ## Views
 
 ```javascript
@@ -69,12 +95,6 @@ window.CUSTOM_CONFIG = {
   editor.render("your_textarea_id");
 </script>
 ```
-
-## TODO
-
-1. Add upload image and file.
-2. Add form helpers.
-
 
 ## Contributing
 

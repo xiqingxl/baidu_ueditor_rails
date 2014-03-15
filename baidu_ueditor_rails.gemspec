@@ -7,9 +7,9 @@ require "baidu_ueditor_rails/version"
 Gem::Specification.new do |s|
   s.name        = "baidu_ueditor_rails"
   s.version     = BaiduUeditorRails::VERSION
-  s.authors     = ["doabit"]
-  s.email       = ["doinsist@gmail.com"]
-  s.homepage    = "https://github.com/baidu_ueditor_rails"
+  s.authors     = ["chuanpin zhu"]
+  s.email       = ["zcppku@gmail.com"]
+  s.homepage    = "https://github.com/zcpdog/baidu_ueditor_rails"
   s.summary     = "Baidu ueditor for rails."
   s.description = "Baidu ueditor for rails."
 
