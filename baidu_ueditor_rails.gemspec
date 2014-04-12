@@ -6,7 +6,7 @@ require "baidu_ueditor_rails/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "baidu_ueditor_rails"
-  s.version     = "0.0.4"
+  s.version     = "0.0.5"
   s.authors     = ["chuanpin zhu"]
   s.email       = ["zcppku@gmail.com"]
   s.homepage    = "https://github.com/zcpdog/baidu_ueditor_rails"
