@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Thu Jun 16 2016 12:33:50 GMT+0800 (CST)
+ * build: Sun Jul 03 2016 18:18:46 GMT-0700 (PDT)
  */
 
 (function(){
@@ -23975,6 +23975,10 @@ UE.plugin.register('autosave', function (){
 
             'contentchange': function () {
 
+                if (!me.getOpt('enableAutoSave')) {
+                  return;
+                }
+
                 if ( !saveKey ) {
                     return;
                 }
@@ -24036,6 +24040,7 @@ UE.plugin.register('autosave', function (){
     }
 
 });
+
 
 // plugins/charts.js
 UE.plugin.register('charts', function (){
