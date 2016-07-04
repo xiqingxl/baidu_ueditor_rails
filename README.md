@@ -1,11 +1,13 @@
 # Baidu ueditor for rails
 
+
 [baidu ueditor][1] for rails, precompile codes from [tinymce-rails][2]
 
   [1]: http://ueditor.baidu.com/website/
   [2]: https://github.com/spohlenz/tinymce-rails
 
-### Notice: The project is unreleased.
+## Version
+ueditor 1.4.3.3
 
 ## Installation
 
